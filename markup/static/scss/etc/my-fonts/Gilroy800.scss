@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Gilroy-ExtraBold'), local('Gilroy-ExtraBold'),
+       url('../fonts/Gilroy/Gilroy800/Gilroy-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Gilroy/Gilroy800/Gilroy-ExtraBold.woff') format('woff') /* Modern Browsers */
+}

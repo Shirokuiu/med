@@ -1,0 +1,183 @@
+// Mixins.
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  @include reset;
+  list-style: none;
+}
+
+@mixin reset-button {
+  @include reset;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@mixin font($family, $size, $weight, $color, $inline: 'paragraf') {
+  @if $inline == 'link' {
+    font-family: $family, sans-serif;
+    font-size: $size;
+    line-height: $size + 4;
+    font-weight: $weight;
+    color: $color;
+    text-decoration: none;
+  } @else if $inline == 'span' {
+    font-family: $family, sans-serif;
+    font-size: $size;
+    line-height: $size + 4;
+    font-weight: $weight;
+    color: $color;
+  } @else if $inline == 'paragraf' {
+    @include reset;
+    font-family: $family, sans-serif;
+    font-size: $size;
+    line-height: $size + 4;
+    font-weight: $weight;
+    color: $color;
+  }
+}
+
+@mixin center-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@mixin exit($width, $height, $color, $rotateB: 45, $rotateA: -45) {
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: $width;
+    height: $height;
+    margin: auto;
+    background-color: $color;
+  }
+
+  &::before {
+    transform: rotate($rotateB deg);
+  }
+
+  &::after {
+    transform: rotate($rotateA deg);
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin bgs($width, $height) {
+  @if $height == 'retina' {
+    background-repeat: no-repeat;
+    background-size: $width auto;
+  } @else {
+    display: block;
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: $width $height;
+  }
+}
+
+@mixin bgi($name, $retina: false) {
+  background-image: url('%=static=%content/' + $name);
+  @if $retina {
+    @media(min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url('%=static=%content/@retina-' + $name);
+    }
+  }
+}
+
+@mixin icon($width, $height, $fill) {
+  display: block;
+  width: $width;
+  height: $height;
+
+    .icon {
+      display: block;
+      width: $width;
+      height: $height;
+      fill: $fill;
+    }
+}
+
+@mixin out($color: '#80bdff') {
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:focus {
+      border-color: $color;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba($color, 0.5);
+    }
+}
+
+@mixin reset-input {
+  @include reset-button;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+@mixin placeholder($fontFamily, $fontSize, $fontWeight, $color) {
+
+  &::-webkit-input-placeholder {
+    font-family: $fontFamily, sans-serif;
+    color: $color;
+    font-size: $fontSize;
+    line-height: $fontSize + 4;
+    font-weight: $fontWeight;
+    opacity: 1
+  }
+
+  &:-moz-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $fontSize + 4;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $fontSize + 4;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $fontSize;
+    line-height: $fontSize + 4;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Pollock2C';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Pollock2C'), local('Pollock2CRegular'),
+       url('../fonts/Pollock2C/Pollock2C-400/Pollock2C.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Pollock2C/Pollock2C-400/Pollock2C.woff') format('woff') /* Modern Browsers */
+}

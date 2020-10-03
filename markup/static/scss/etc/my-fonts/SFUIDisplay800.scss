@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'SFUIDisplay';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('SFUIDisplay-Heavy'), local('SFUIDisplay-Heavy'),
+       url('../fonts/SFUIDisplay/SFUIDisplay800/SFUIDisplay-Heavy.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/SFUIDisplay/SFUIDisplay800/SFUIDisplay-Heavy.woff') format('woff') /* Modern Browsers */
+}

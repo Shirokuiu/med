@@ -1,0 +1,20 @@
+mixin img(name, format, picture = false)
+  if picture === 'mobile'
+    picture
+      source(type="image/webp" media="(max-width: 480px)" srcset="%=static=%img/content/" + name + '@mobile.webp')
+      source(type="image/webp" srcset="%=static=%img/content/" + name + '.webp')
+      source(media="(max-width: 480px)" srcset="%=static=%img/content/" + name + "@mobile" + format)
+      img(src="%=static=%img/content/" + name + format alt="Картинка")
+  else if picture === 'retina'
+    picture
+      source(type="image/webp" media="(min-width: 480px) and (max-width: 3840px)" srcset="%=static=%img/content/" + name + ".webp 1x," + "%=static=%img/content/" + name + "@retina.webp 2x")
+      source(type="image/webp" media="(max-width: 480px)" srcset="%=static=%img/content/" + name + "@mobile.webp 1x," + "%=static=%img/content/" + name + "@mobileRetina.webp 2x")
+      source(media="(min-width: 480px) and (max-width: 3840px)" srcset="%=static=%img/content/" + name + format + " " + "1x," + "%=static=%img/content/" + name + "@retina" + format + " " + "2x")
+      source(media="(max-width: 480px)" srcset="%=static=%img/content/" + name + "@mobile" + format + " " + "1x," + "%=static=%img/content/" + name + "@mobileRetina" + format + " " + "2x")
+      img(src="%=static=%img/content/" + name + format alt="Картинка")
+  else if picture === 'webp'
+    picture
+      source(type="image/webp" srcset="%=static=%img/content/" + name + '.webp')
+      img(src="%=static=%img/content/" + name + format alt="Картинка")
+  else if picture === 'simple'
+    img(src="%=static=%img/content/" + name + format alt="Картинка")
