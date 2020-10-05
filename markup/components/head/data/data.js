@@ -1,6 +1,8 @@
-head: {
-  defaults: {
-    title: 'default title',
-    useSocialMetaTags: true
+var data = {
+  head: {
+    index: {
+      title: 'Главная страница',
+      useSocialMetaTags: true
+    }
   }
 };

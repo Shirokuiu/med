@@ -1,4 +1,4 @@
-mixin img(name, format, picture = false)
+mixin img(name, format, picture='simple')
   if picture === 'mobile'
     picture
       source(type="image/webp" media="(max-width: 480px)" srcset="%=static=%img/content/" + name + '@mobile.webp')
