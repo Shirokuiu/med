@@ -1,1 +1,271 @@
+.footer-content {
+  padding: 40px 0;
+  padding-bottom: 47px;
+  background: linear-gradient(180deg, rgba(230, 241, 255, 0.35) 0%, #D0E6FF 100%);
 
+  &__top {
+    display: flex;
+    margin-bottom: 150px;
+  }
+
+  &__left {
+    flex-shrink: 0;
+    max-width: 310px;
+    width: 100%;
+    margin-right: 4.4%;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__tel {
+    margin-bottom: 46px;
+  }
+
+  &__tel-link {
+    @include font(Proxima Nova, 30px, 700, #E60028, link);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__tel-description {
+    @include font(HelveticaNeueCyr, 15px, 400, #0E3F60);
+  }
+
+  &__license {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__license-img-wrap {
+    width: 70px;
+    height: 84px;
+    margin-bottom: 9px;
+  }
+
+  &__license-description {
+    @include font(HelveticaNeueCyr, 14px, 500, #536C7D);
+    width: 100%;
+    max-width: 170px;
+    text-align: center;
+  }
+
+  &__middle {
+    flex-grow: 1;
+  }
+
+  &__list-wrap {
+    margin-right: 124px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__list-title {
+    @include font(HelveticaNeueCyr, 18px, 700, #0E3F60);
+    margin-bottom: 31px;
+  }
+
+  &__list-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    @include reset-list;
+    width: 100%;
+    max-width: 252px;
+    margin-right: 9.71%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__list-items {
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-link {
+    @include font(HelveticaNeueCyr, 16px, 400, #536C7D, link);
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+
+    span {
+      border-bottom: 1px solid transparent;
+    }
+
+    &:hover {
+      color: #0163BE;
+
+      .footer-content__list-text {
+        border-bottom-color: #0163BE;
+      }
+    }
+  }
+
+  &__link-text {
+    border-bottom: 1px solid transparent;
+  }
+
+  &__right {
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 4%;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+  }
+
+  &__copyright {
+    @include font(HelveticaNeueCyr, 14px, 300, #536C7D);
+  }
+
+  &__yandex {
+    display: block;
+    width: 88px;
+    height: 31px;
+  }
+}
+
+@media (max-width: 1510px) {
+  .footer-content {
+    padding-top: 28px;
+    padding-bottom: 46px;
+  }
+
+  .footer-content__top {
+    flex-wrap: wrap;
+  }
+
+  .footer-content__left {
+    max-width: initial;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .footer-content__logo {
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .footer-content__tel {
+    margin-bottom: 0;
+    order: 3;
+  }
+
+  .footer-content__license {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-content__license-img-wrap {
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  .footer-content__license-description {
+    text-align: left;
+  }
+
+  .footer-content__middle {
+    margin-right: 13%;
+  }
+
+  .footer-content__list-title {
+    margin-bottom: 20px;
+  }
+
+  .footer-content__list-row {
+    justify-content: space-between;
+  }
+
+  .footer-content__list {
+    margin-right: 30px;
+  }
+
+  .footer-content__right {
+    padding-right: 0;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .footer-content__list-wrap {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .footer-content__top {
+    margin-bottom: 44px;
+  }
+
+  .footer-content__left {
+    flex-direction: column;
+  }
+
+  .footer-content__logo {
+    display: none !important;
+  }
+
+  .footer-content__tel {
+    order: 0;
+    margin-bottom: 35px;
+  }
+
+  .footer-content__tel-description {
+    text-align: center;
+  }
+
+  .footer-content__license {
+    flex-direction: column;
+    order: 0;
+  }
+
+  .footer-content__license-img-wrap {
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
+
+  .footer-content__license-description {
+    text-align: center;
+  }
+
+  .footer-content__middle {
+    display: none;
+  }
+
+  .footer-content__right {
+    display: none;
+  }
+
+  .footer-content__bottom {
+    padding-right: 0;
+    display: block;
+  }
+
+  .footer-content__copyright {
+    text-align: center;
+  }
+
+  .footer-content__yandex {
+    display: none;
+  }
+}

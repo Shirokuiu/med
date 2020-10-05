@@ -14,17 +14,16 @@ mixin page-header(data)
               a.page-header__top-item(href='#', class={ "page-header__top-item--border": item.border })= item.text
     .page-header__mobile-menu
       button.page-header__mobile-menu-order-btn(type='button') Оформить заявку
-
     .page-header__bottom
       .container.page-header__row.page-header__row--align-start
-        .page-header__logo-wrap
-          span.page-header__logo
+        .logo.logo--header.page-header__logo-wrap#pageHeaderLogo
+          div.logo__img
             picture
               source(media="(max-width: 1160px)" srcset="%=static=%img/content/logo-mobile.svg")
               img(src="%=static=%img/content/logo.svg" alt="Картинка")
-          p.page-header__logo-text-wrap
-            span.page-header__logo-title МЕДКОМИССИЯ №1
-            span.page-header__logo-description профосмотры сотрудников
+          p.logo__text-wrap
+            span.logo__title МЕДКОМИССИЯ №1
+            span.logo__description профосмотры сотрудников
         .page-header__info
           .page-header__info-top
             nav.main-nav.page-header__main-nav-wrap

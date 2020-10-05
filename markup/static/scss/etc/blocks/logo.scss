@@ -1,0 +1,60 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 72px;
+    height: 68px;
+    margin-right: 14px;
+  }
+
+  &__text-wrap {
+    @include reset;
+    @include font(Gilroy, 16px, 500, #0163BE)
+  }
+
+  &__title,
+  &__description {
+    display: block;
+  }
+
+  &__title {
+    @include font(Gilroy, 23px, 800, #E60028)
+  }
+}
+
+@media (max-width: 1400px) {
+  .logo__img {
+    width: 42px;
+    height: 38px;
+  }
+
+  .logo__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .logo__description {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .logo__img {
+    width: 50px;
+    height: 47px;
+  }
+
+  .logo--header .logo__title {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .logo--header .logo__description {
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 14px;
+  }
+}

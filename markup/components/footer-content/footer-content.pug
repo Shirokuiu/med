@@ -1,2 +1,53 @@
 mixin footer-content(data)
   .footer-content
+    .container
+      .footer-content__top
+        .footer-content__left
+          .logo.footer-content__logo
+            div.logo__img
+              +img('logo', '.svg')
+            p.logo__text-wrap
+              span.logo__title МЕДКОМИССИЯ №1
+              span.logo__description профосмотры сотрудников
+          .footer-content__tel
+            a.footer-content__tel-link(href='tel:+7 (495) 720-60-37') +7 (495) 720-60-37
+            p.footer-content__tel-description Телефон для записи на прием
+          .footer-content__license
+            .footer-content__license-img-wrap
+              +img('orel', '.png')
+            p.footer-content__license-description Лицензия департамента здравоохранения города Москвы
+        .footer-content__middle
+          .footer-content__list-wrap
+            h3.footer-content__list-title МЕДИЦИНСКИЕ СПРАВКИ
+            .footer-content__list-row
+              ul.footer-content__list
+                each item in data.list1
+                  li.footer-content__list-items
+                    a.footer-content__list-link(href="#")
+                      span.footer-content__list-text= item
+              ul.footer-content__list
+                each item in data.list2
+                  li.footer-content__list-items
+                    a.footer-content__list-link(href="#")
+                      span.footer-content__list-text= item
+        .footer-content__right
+          .footer-content__list-wrap
+            h3.footer-content__list-title УСЛУГИ
+            .footer-content__list-row
+              ul.footer-content__list
+                each item in data.list3
+                  li.footer-content__list-items
+                    a.footer-content__list-link(href="#")
+                      span.footer-content__list-text= item
+          .footer-content__list-wrap
+            h3.footer-content__list-title ИНФОРМАЦИЯ
+            .footer-content__list-row
+              ul.footer-content__list
+                each item in data.list4
+                  li.footer-content__list-items
+                    a.footer-content__list-link(href="#")
+                      span.footer-content__list-text= item
+      .footer-content__bottom
+        p.footer-content__copyright © 2000-2020 Медкомиссия №1
+        span.footer-content__yandex
+          +img('metr', '.jpg')

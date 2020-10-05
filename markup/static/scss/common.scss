@@ -30,6 +30,13 @@ img {
   height: auto;
 }
 
+.page {
+
+  &--menu-open {
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 1160px) {
   .container {
     padding: 0 16px;
