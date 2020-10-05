@@ -1,0 +1,13 @@
+.description {
+
+  &__headline {
+    margin-bottom: 34px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .description__headline {
+    margin-bottom: 18px;
+  }
+}

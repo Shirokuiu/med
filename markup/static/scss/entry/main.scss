@@ -12,5 +12,9 @@
 /* Components, which is used in current project. */
 @import 'partials/_components.scss';
 
+// Components
+@import 'components/page-header/page-header';
+@import 'components/footer-content/footer-content';
+
 /* Additional style files. */
 @import '../etc/etc.scss';
