@@ -18,15 +18,15 @@ let rules = [
   {
     test: /\.js$/,
     loader: 'source-map-loader',
-    enforce: 'pre',
-  },
+    enforce: 'pre'
+  }
 ];
 let plugins = [
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-    },
-  }),
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+    }
+  })
 ];
 let minimizers = [];
 
@@ -42,12 +42,12 @@ if (compressJs) {
         compress: {
           /* eslint-disable camelcase */
           drop_console: tars.config.js.removeConsoleLog,
-          drop_debugger: tars.config.js.removeConsoleLog,
+          drop_debugger: tars.config.js.removeConsoleLog
           /* eslint-enable camelcase */
         },
-        mangle: false,
-      },
-    }),
+        mangle: false
+      }
+    })
   );
 }
 
@@ -66,8 +66,8 @@ if (tars.config.js.lint) {
     enforce: 'pre',
     include: `${cwd}/markup`,
     options: {
-      configFile: `${cwd}/.eslintrc`,
-    },
+      configFile: `${cwd}/.eslintrc`
+    }
   });
 }
 
@@ -75,7 +75,7 @@ if (tars.config.js.useBabel) {
   rules.push({
     test: /\.js$/,
     loader: 'babel-loader',
-    include: /markup/,
+    include: /markup/
   });
 }
 
@@ -95,7 +95,7 @@ function prepareEntryPoints(entryConfig) {
   // Take webpack dev-server and webpack-hot-middleware from TARS-CLI, if TARS has been started by TARS-CLI
   if (process.env.npmRoot) {
     devServerEntryPoints = devServerEntryPoints.map(
-      (devServerEntryPoint) => process.env.npmRoot + devServerEntryPoint,
+      (devServerEntryPoint) => process.env.npmRoot + devServerEntryPoint
     );
   }
 
@@ -111,15 +111,15 @@ module.exports = {
   mode: webpackMode,
   // We have to add some pathes to entry point in case of using HMR
   entry: prepareEntryPoints({
-    main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main.js`),
+    main: path.resolve(`${cwd}/markup/${staticFolderName}/js/main.js`)
   }),
 
   output: {
     path: path.resolve(
-      `${tars.isDevMode ? `${tars.config.devPath}` : `${tars.options.build.path}`}/${staticFolderName}/js`,
+      `${tars.isDevMode ? `${tars.config.devPath}` : `${tars.options.build.path}`}/${staticFolderName}/js`
     ),
     publicPath: `./${staticFolderName}/js/`,
-    filename: `${outputFileNameTemplate}.js`,
+    filename: `${outputFileNameTemplate}.js`
   },
 
   devtool: generateSourceMaps ? sourceMapsType : false,
@@ -127,24 +127,24 @@ module.exports = {
   watch: tars.options.watch.isActive && !tars.config.js.webpack.useHMR,
 
   module: {
-    rules,
+    rules
   },
 
   plugins,
 
   resolveLoader: {
-    modules: modulesDirectories,
+    modules: modulesDirectories
   },
 
   optimization: {
-    minimizer: minimizers,
+    minimizer: minimizers
   },
 
   resolve: {
     alias: {
       modules: path.resolve(`./markup/${tars.config.fs.componentsFolderName}`),
       components: path.resolve(`./markup/${tars.config.fs.componentsFolderName}`),
-      static: path.resolve(`./markup/${staticFolderName}`),
-    },
-  },
+      static: path.resolve(`./markup/${staticFolderName}`)
+    }
+  }
 };

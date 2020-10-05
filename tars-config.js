@@ -6,42 +6,42 @@ module.exports = {
     symbolsConfig: {
       loadingType: 'inject',
       usePolyfillForExternalSymbols: true,
-      pathToExternalSymbolsFile: '',
-    },
+      pathToExternalSymbolsFile: ''
+    }
   },
   css: {
-    workflow: 'concat',
+    workflow: 'concat'
   },
   js: {
     workflow: 'modular',
     bundler: 'webpack',
-    lint: true,
+    lint: false,
     useBabel: true,
     removeConsoleLog: true,
     webpack: {
-      useHMR: false,
-      providePlugin: {},
+      useHMR: true,
+      providePlugin: {}
     },
     jsPathsToConcatBeforeModulesJs: [],
     lintJsCodeBeforeModules: false,
     jsPathsToConcatAfterModulesJs: [],
-    lintJsCodeAfterModules: false,
+    lintJsCodeAfterModules: false
   },
   sourcemaps: {
     js: {
       active: true,
-      inline: true,
+      inline: true
     },
     css: {
       active: true,
-      inline: true,
-    },
+      inline: true
+    }
   },
   notifyConfig: {
     useNotify: false,
     title: 'TARS notification',
     sounds: {},
-    taskFinishedText: 'Task finished at: ',
+    taskFinishedText: 'Task finished at: '
   },
   minifyHtml: false,
   generateStaticPath: true,
@@ -56,7 +56,7 @@ module.exports = {
   fs: {
     staticFolderName: 'static',
     imagesFolderName: 'img',
-    componentsFolderName: 'components',
+    componentsFolderName: 'components'
   },
-  staticPrefix: 'static/',
+  staticPrefix: 'static/'
 };

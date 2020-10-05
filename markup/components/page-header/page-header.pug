@@ -1,2 +1,58 @@
 mixin page-header(data)
   header.page-header
+    .page-header__top
+      .container.page-header__row#rowTop
+        button.page-header__top-menu-btn(type="button")
+          span.page-header__top-menu-btn-icon-burger
+            +svg('open-menu_1')
+          span.page-header__top-menu-btn-icon-close
+            +svg('close_24px')
+        p.page-header__top-title 25 медицинских центров в Москве и МО
+        ul.page-header__top-list#topList
+          each item in data.topLists
+            li.page-header__top-items
+              a.page-header__top-item(href='#', class={ "page-header__top-item--border": item.border })= item.text
+    .page-header__mobile-menu
+      button.page-header__mobile-menu-order-btn(type='button') Оформить заявку
+
+    .page-header__bottom
+      .container.page-header__row.page-header__row--align-start
+        .page-header__logo-wrap
+          span.page-header__logo
+            picture
+              source(media="(max-width: 1160px)" srcset="%=static=%img/content/logo-mobile.svg")
+              img(src="%=static=%img/content/logo.svg" alt="Картинка")
+          p.page-header__logo-text-wrap
+            span.page-header__logo-title МЕДКОМИССИЯ №1
+            span.page-header__logo-description профосмотры сотрудников
+        .page-header__info
+          .page-header__info-top
+            nav.main-nav.page-header__main-nav-wrap
+              .main-nav__list-wrap
+                ul.main-nav__list
+                  each item in data.mainNavLinks
+                    li.main-nav__items
+                      a.main-nav__link(
+                        href="#"
+                        class={'main-nav__link--active': item.isActive}
+                        )
+                        span.main-nav__item-title= item.title
+                      ul.main-nav__dropdown
+                .main-nav__list-border
+            .page-header__tel-wrap
+              a.page-header__tel(href='tel:+7 (495) 720-60-37')
+                span.page-header__tel-icon
+                  +svg('local_phone_24px')
+                p.page-header__tel-link +7 (495) 720-60-37
+              p.page-header__tel-description Телефон для записи на прием
+          ul.page-header__metro
+            each item in data.metroLists
+              li.page-header__metro-items
+                span.page-header__metro-color(
+                  class={
+                    'page-header__metro-color--green': item.colorMod === 'green',
+                    'page-header__metro-color--brown': item.colorMod === 'brown'
+                  }
+                  )
+                a.page-header__metro-title(href="#")=item.title
+                span.page-header__metro-time= item.time
