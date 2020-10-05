@@ -1,0 +1,29 @@
+.link-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 22px;
+  padding-bottom: 13px;
+  text-decoration: none;
+  background-color: #FFDD2D;
+  border-radius: 4px;
+
+  &__title {
+    @include font(Proxima Nova, 30px, 700, #0E3F60, span);
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    @include font(HelveticaNeueCyr, 15px, 400, #0E3F60, span);
+    display: block;
+    text-align: right;
+  }
+}
+
+@media (max-width: 420px) {
+  .link-order {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

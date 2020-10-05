@@ -12,7 +12,26 @@ html(class="no-js", lang="ru")
       .content
         +page-header(pageHeader.index)
         main.page-content
-
+          .description.page-content__description-top
+            .container
+              h2.headline.description__headline Проведение медицинских осмотров работников
+              p.text В наших медицинских центрах проводятся медосмотры работников любой специальности. Частные лица могут приехать на медкомиссию в любой филиал в Москве и области в удобное время. Мы работаем без выходных, принимаем всех, независимо от прописки. Для юридических лиц мы организовываем обследования работников в наших клиниках или на территории заказчика (выездной профосмотр). Работаем по Москве и Московской области.
+          .description.page-content__description-bottom
+            .container
+              h2.headline.description__headline Проведение медицинских комиссиий
+              p.text В наших медицинских центрах проводятся медосмотры работников любой специальности. Частные лица могут приехать на медкомиссию в любой филиал в Москве и области в удобное время. Мы работаем без выходных, принимаем всех, независимо от прописки. Для юридических лиц мы организовываем обследования работников в наших клиниках или на территории заказчика (выездной профосмотр). Работаем по Москве и Московской области.
+          .order-info.page-content__order-info
+            .container
+              h2.headline.order-info__headline Оформить справку просто!
+              .order-info__content
+                a.link-order.order-info__tel(href='tel:+7 (495) 720-60-37')
+                  span.link-order__title +7 (495) 720-60-37
+                  span.link-order__text Звоните! Многоканальный телефон
+                ol.order-info__list
+                    li.order-info__items.order-info__items--order1 1. Позвоните и запишитесь на прием
+                    li.order-info__items.order-info__items--order3 2. Пройдите медицинский осмотр без очереди
+                    li.order-info__items.order-info__items--order2 3. Получите справку с печатями и копией лицензии
+                    li.order-info__items.order-info__items--order4 4. Оплатите услуги по факту получения документов
       footer.page-footer
         +footer-content(footerContent)
 

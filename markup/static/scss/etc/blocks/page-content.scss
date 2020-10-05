@@ -1,2 +1,28 @@
 .page-content {
+
+  &__description-top {
+    margin-bottom: 42px;
+  }
+
+  &__description-bottom {
+    margin-bottom: 60px;
+  }
+
+  &__order-info {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-content__description-top {
+    margin-bottom: 30px;
+  }
+
+  .page-content__description-bottom {
+    margin-bottom: 38px;
+  }
+
+  .page-content__order-info {
+    margin-bottom: 35px;
+  }
 }

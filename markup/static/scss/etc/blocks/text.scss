@@ -1,0 +1,11 @@
+.text {
+  @include font(HelveticaNeueCyr, 16px, 400, #536C7D);
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .text {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
