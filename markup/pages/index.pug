@@ -6,11 +6,11 @@ html(class="no-js", lang="ru")
   include ../components/page-header/page-header.pug
   include ../components/footer-content/footer-content.pug
   head
-    +head(head.defaults)
+    +head(head.index)
   body.page
     .wrapper
       .content
-        +page-header
+        +page-header(pageHeader.index)
         main.page-content
 
       footer.page-footer
