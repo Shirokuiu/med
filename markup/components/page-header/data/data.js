@@ -1,1 +1,1 @@
-var data = {'page-header': {}};
+var data = { 'page-header': {} };
