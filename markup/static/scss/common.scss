@@ -13,6 +13,10 @@ body {
 
 .content {
   flex: 1 0 auto;
+
+  &__page-header-wrap {
+    margin-bottom: 13px;
+  }
 }
 
 .page-footer {
@@ -40,5 +44,9 @@ img {
 @media (max-width: 1160px) {
   .container {
     padding: 0 16px;
+  }
+
+  .content__page-header-wrap {
+    margin-bottom: 28px;
   }
 }

@@ -1,0 +1,16 @@
+.note {
+  display: flex;
+
+  &:before {
+    content: '';
+    flex-shrink: 0;
+    display: block;
+    width: 6px;
+    margin-right: 19px;
+    background-color: rgba(255, 112, 88, 0.5);
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+}

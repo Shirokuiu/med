@@ -11,6 +11,14 @@
   &__order-info {
     margin-bottom: 60px;
   }
+
+  &__examination {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    margin-bottom: 42px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -24,5 +32,9 @@
 
   .page-content__order-info {
     margin-bottom: 35px;
+  }
+
+  .page-content__form {
+    margin-bottom: 30px;
   }
 }

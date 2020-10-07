@@ -6,7 +6,8 @@
   "directories": {},
   "dependencies": {
     "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5"
+    "@babel/preset-env": "^7.11.5",
+    "imask": "^6.0.5"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

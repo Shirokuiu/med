@@ -143,6 +143,12 @@
   text-align: left;
 }
 
+@mixin reset-select {
+  @include reset-input;
+  appearance: none;
+  cursor: pointer;
+}
+
 @mixin placeholder($fontFamily, $fontSize, $fontWeight, $color) {
 
   &::-webkit-input-placeholder {

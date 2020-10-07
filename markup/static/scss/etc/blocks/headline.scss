@@ -1,6 +1,11 @@
 .headline {
   @include font(Gilroy, 36px, 500, #0E3F60);
   display: block;
+
+  &--lg {
+    font-size: 65px;
+    line-height: 69px;
+  }
 }
 
 @media (max-width: 500px) {

@@ -1,0 +1,91 @@
+mixin form(data)
+  .form
+    .container
+      .form__content
+        .form__left
+          .form__title-wrap
+            h1.headline.headline--lg.form__title-headline Медосмотры и профосмотры
+            p.text.text--lg Организация и проведение медосмотров в Москве согласно приказу 302н
+          .form__list-wrap
+            ul.form__list
+              li.form__list-items
+                span.form__list-icon
+                  +img('hospital-building1', '.svg')
+                .form__list-description-wrap
+                  span.form__list-description-title Без отрыва от работы
+                  p.text С выездом, до 70 сотрудников за 1 день
+              li.form__list-items
+                span.form__list-icon
+                  +img('doctors1', '.svg')
+                .form__list-left-description-wrap
+                  span.form__list-description-title от 1 000 руб.
+                  p.text Стоимость за одного человека
+              li.form__list-items
+                span.form__list-icon
+                  +img('pharmaceutical1', '.svg')
+                .form__list-left-description-wrap
+                  span.form__list-description-title 25 филиалов в Москве
+                  p.text Медицинские центры рядом с метро
+            ul.form__list
+              li.form__list-items
+                span.form__list-icon
+                  +img('orel-mini', '.png', 'webp')
+                .form__list-description-wrap
+                  p.text Лицензия департамента здравоохранения города Москвы
+              li.form__list-items
+                span.form__list-icon
+                  +img('doctor2', '.svg')
+                .form__list-left-description-wrap
+                  p.text проводятся медосмотры работников любой специальности
+              li.form__list-items
+                span.form__list-icon
+                  +img('caduceus-symbol2', '.svg')
+                .form__list-left-description-wrap
+                  p.text Мы не продаем справки. Для получения справки нужно обязательно пройти медосмотр.
+          .form__card-wrap-content
+            .form__card-wrap
+              h3.form__card-title Оформите заявку онлайн:
+              form.form__card-form(action='action.php' method='post')
+                .form__card-form-content
+                  ul.form__card-form-list
+                    li.form__card-form-items.form__card-form-items--select
+                      label.form__card-form-item-label
+                        .form__card-form-item-title
+                          span.text.text--sm Кол-во человек:
+                        .form__card-form-select-wrap
+                          select.form__card-form-select
+                            each option, idx in ['', '', '', '', '', '', '', '', '', '']
+                              option(selected=idx === 9)= idx + 1 + ' чел.'
+                          span.form__card-form-select-arrow
+                            +svg('arrow')
+                    li.form__card-form-items
+                      label.form__card-form-item-label
+                        .form__card-form-item-title
+                          span.text.text--sm Имя
+                        input.form__card-form-item-input(type='text' placeholder='Ваше имя' required)
+                    li.form__card-form-items
+                      label.form__card-form-item-label
+                        .form__card-form-item-title
+                          span.text.text--sm Телефон
+                        input.form__card-form-item-input#formTel(type='tel' placeholder='+7 ___ ___-__-__' required)
+                    li.form__card-form-items.form__card-form-items--textarea
+                      textarea.form__card-form-item-input.form__card-form-item-input--textarea(placeholder='Комментрарий')
+                  .form__card-form-submit-wrap
+                    button.form__card-form-submit(type='submit') Оформить заявку
+                label.form__card-form-terms
+                  span.form__card-form-terms-checkbox-wrap
+                    input.form__card-form-terms-checkbox(type='checkbox' checked required)
+                    span.form__card-form-terms-checkbox-arrow
+                      +svg('checkbox-arrow')
+                  span.form__card-form-terms-text Я принимаю
+                    a.form__card-form-terms-link(href='#')  условия передачи информации
+        .form__right
+          .form__img-badge
+            .form__img-badge-text-wrap
+              .form__img-badge-text-title
+                span.form__img-badge-text-title-top 20
+                span.form__img-badge-text-title-bottom ЛЕТ
+              p.form__img-badge-text-description Проводим медицинские профосмотры
+            +img('badge', '.svg')
+          .form__img-doctor
+            +img('k_1', '.png', 'webp')

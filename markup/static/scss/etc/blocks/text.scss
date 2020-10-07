@@ -1,6 +1,16 @@
 .text {
   @include font(HelveticaNeueCyr, 16px, 400, #536C7D);
   display: block;
+
+  &--sm {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--lg {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 @media (max-width: 500px) {

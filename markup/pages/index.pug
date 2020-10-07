@@ -4,18 +4,36 @@ html(class="no-js", lang="ru")
   include ../components/img/img.pug
   include ../components/svg/svg.pug
   include ../components/page-header/page-header.pug
+    include ../components/form/form.pug
   include ../components/footer-content/footer-content.pug
   head
     +head(head.index)
   body.page
     .wrapper
       .content
-        +page-header(pageHeader.index)
+        .content__page-header-wrap
+          +page-header(pageHeader.index)
         main.page-content
+          .page-content__form
+            +form
           .description.page-content__description-top
             .container
               h2.headline.description__headline Проведение медицинских осмотров работников
               p.text В наших медицинских центрах проводятся медосмотры работников любой специальности. Частные лица могут приехать на медкомиссию в любой филиал в Москве и области в удобное время. Мы работаем без выходных, принимаем всех, независимо от прописки. Для юридических лиц мы организовываем обследования работников в наших клиниках или на территории заказчика (выездной профосмотр). Работаем по Москве и Московской области.
+          .examination.page-content__examination
+            .container
+              h2.headline.examination__headline Список обследований
+              .examination__row
+                .examination__img-wrap
+                  +img('examination', '.jpg', 'webp')
+                .examination__description-wrap
+                  p.text.examination__description Во время профосмотра у пациента берут анализы, также его осматривают несколько специалистов и проводят функциональные исследования. Перечень процедур зависит от должности работника. Обязательными для всех являются:
+                  ul.examination__list
+                    each item in ['осмотр у терапевта, нарколога и психиатра;', 'флюорография;', 'ЭКГ;', 'общий анализ крови и мочи.']
+                      li.examination__list-items= item
+                  .note
+                    .note__content
+                      p.text Женщинам нужно проходить гинекологическое обследование. Полный профосмотр одного человека займет около 20 минут. Мы принимаем пациентов оперативно, без очередей. Все анализы и осмотры входят в стоимость.
           .description.page-content__description-bottom
             .container
               h2.headline.description__headline Проведение медицинских комиссиий
