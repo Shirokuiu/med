@@ -4,7 +4,10 @@ html(class="no-js", lang="ru")
   include ../components/img/img.pug
   include ../components/svg/svg.pug
   include ../components/page-header/page-header.pug
-    include ../components/form/form.pug
+  include ../components/form/form.pug
+  include ../components/fillial/fillial
+  include ../components/services/services
+  include ../components/references/references
   include ../components/footer-content/footer-content.pug
   head
     +head(head.index)
@@ -20,6 +23,8 @@ html(class="no-js", lang="ru")
             .container
               h2.headline.description__headline Проведение медицинских осмотров работников
               p.text В наших медицинских центрах проводятся медосмотры работников любой специальности. Частные лица могут приехать на медкомиссию в любой филиал в Москве и области в удобное время. Мы работаем без выходных, принимаем всех, независимо от прописки. Для юридических лиц мы организовываем обследования работников в наших клиниках или на территории заказчика (выездной профосмотр). Работаем по Москве и Московской области.
+          .page-content__fillial
+            +fillial
           .examination.page-content__examination
             .container
               h2.headline.examination__headline Список обследований
@@ -34,6 +39,10 @@ html(class="no-js", lang="ru")
                   .note
                     .note__content
                       p.text Женщинам нужно проходить гинекологическое обследование. Полный профосмотр одного человека займет около 20 минут. Мы принимаем пациентов оперативно, без очередей. Все анализы и осмотры входят в стоимость.
+          .container.page-content__services
+            +services
+          .container.page-content__references
+            +references(references)
           .description.page-content__description-bottom
             .container
               h2.headline.description__headline Проведение медицинских комиссиий

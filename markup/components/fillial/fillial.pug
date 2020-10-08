@@ -1,0 +1,116 @@
+mixin fillial(data)
+  .fillial
+    .container.fillial__title-wrap
+      h2.fillial__title
+        span.fillial__title-date 25 филиалов
+        |  рядом с метро
+      a.fillial__tel(href='tel:+7 (495) 720-60-37')
+        span.fillial__tel-title +7 (495) 720-60-37
+        span.fillial__tel-description Звоните! Многоканальный телефон
+    .fillial__swiper-wrap
+      .fillial__slider.owl-carousel
+        each item in [1, 2, 3]
+          .fillial__slider-slide
+            .fillial__slide-content
+              .fillial__slide-img
+                +img('slide1', '.jpg', 'webp')
+              .fillial__slide-description-wrap
+                a.fillial__slide-title(href='#')
+                  span.fillial__slide-title-text Медосмотры на Бульваре Рокоссовского
+                ul.fillial__slide-list
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon
+                      +svg('placeholder1')
+                    p.fillial__slide-list-item-text Москва, ул. Ивантеевская
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--calendar
+                      +svg('calendar1')
+                    p.fillial__slide-list-item-text
+                      span.fillial__slide-list-item-text-item Пн-Сб: 9:00 - 20:00,
+                      span.fillial__slide-list-item-text-item Вс: 10:00 - 19:00
+                  li.fillial__slide-list-items.fillial__slide-list-items--flex-wrap
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--metro-mod1
+                      +svg('moscow1')
+                    p.fillial__slide-list-item-text Бульвар Рокоссовского
+                    .fillial__slide-list-item-note-wrap
+                      span.fillial__slide-list-item-note-icon
+                        +svg('walk1')
+                      span.fillial__slide-list-item-note-text 300 м
+          .fillial__slider-slide
+            .fillial__slide-content
+              .fillial__slide-img
+                +img('slide2', '.jpg', 'webp')
+              .fillial__slide-description-wrap
+                a.fillial__slide-title(href='#')
+                  span.fillial__slide-title-text Профосмотры на Братиславской
+                ul.fillial__slide-list
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon
+                      +svg('placeholder1')
+                    p.fillial__slide-list-item-text Москва, ул. Братиславская
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--calendar
+                      +svg('calendar1')
+                    p.fillial__slide-list-item-text
+                      span.fillial__slide-list-item-text-item Пн-Сб: 9:00 - 20:00,
+                      span.fillial__slide-list-item-text-item Вс: 10:00 - 19:00
+                  li.fillial__slide-list-items.fillial__slide-list-items--flex-wrap
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--metro-mod2
+                      +svg('moscow1')
+                    p.fillial__slide-list-item-text Братиславская
+                    .fillial__slide-list-item-note-wrap
+                      span.fillial__slide-list-item-note-icon
+                        +svg('walk1')
+                      span.fillial__slide-list-item-note-text 600 м
+          .fillial__slider-slide
+            .fillial__slide-content
+              .fillial__slide-img
+                +img('slide3', '.jpg', 'webp')
+              .fillial__slide-description-wrap
+                a.fillial__slide-title(href='#')
+                  span.fillial__slide-title-text Медкомиссия на Бунинской аллее
+                ul.fillial__slide-list
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon
+                      +svg('placeholder1')
+                    p.fillial__slide-list-item-text Москва, ул. Адмирала Лазарева
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--calendar
+                      +svg('calendar1')
+                    p.fillial__slide-list-item-text
+                      span.fillial__slide-list-item-text-item Пн-Сб: 9:00 - 20:00,
+                      span.fillial__slide-list-item-text-item Вс: 10:00 - 19:00
+                  li.fillial__slide-list-items.fillial__slide-list-items--flex-wrap
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--metro-mod3
+                      +svg('moscow1')
+                    p.fillial__slide-list-item-text Бунинская аллея
+                    .fillial__slide-list-item-note-wrap
+                      span.fillial__slide-list-item-note-icon
+                        +svg('walk1')
+                      span.fillial__slide-list-item-note-text 500 м
+          .fillial__slider-slide
+            .fillial__slide-content
+              .fillial__slide-img
+                +img('slide4', '.jpg', 'webp')
+              .fillial__slide-description-wrap
+                a.fillial__slide-title(href='#')
+                  span.fillial__slide-title-text Медосмотры на Севастопольской
+                ul.fillial__slide-list
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon
+                      +svg('placeholder1')
+                    p.fillial__slide-list-item-text Москва, ул. Малая Юшуньская
+                  li.fillial__slide-list-items
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--calendar
+                      +svg('calendar1')
+                    p.fillial__slide-list-item-text
+                      span.fillial__slide-list-item-text-item Пн-Сб: 9:00 - 20:00,
+                      span.fillial__slide-list-item-text-item Вс: 10:00 - 19:00
+                  li.fillial__slide-list-items.fillial__slide-list-items--flex-wrap
+                    span.fillial__slide-list-item-icon.fillial__slide-list-item-icon--metro-mod4
+                      +svg('moscow1')
+                    p.fillial__slide-list-item-text Каховская/Севастопольская
+                    .fillial__slide-list-item-note-wrap
+                      span.fillial__slide-list-item-note-icon
+                        +svg('walk1')
+                      span.fillial__slide-list-item-note-text 200 м

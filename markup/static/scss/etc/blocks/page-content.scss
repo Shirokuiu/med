@@ -19,6 +19,18 @@
   &__form {
     margin-bottom: 42px;
   }
+
+  &__fillial {
+    margin-bottom: 45px;
+  }
+
+  &__services {
+    margin-bottom: 57px;
+  }
+
+  &__references {
+    margin-bottom: 65px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -36,5 +48,17 @@
 
   .page-content__form {
     margin-bottom: 30px;
+  }
+
+  .page-content__fillial {
+    margin-bottom: 30px;
+  }
+
+  .page-content__services {
+    margin-bottom: 24px;
+  }
+
+  .page-content__references {
+    margin-bottom: 35px;
   }
 }

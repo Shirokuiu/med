@@ -1,0 +1,69 @@
+mixin services(data)
+  .services
+    h2.headline.services__headline Наши услуги и цены
+    table.services__table
+      thead.services__head-wrap
+        tr.services__head
+          th.services__head-th.services__head-th--title Наименование услуги
+          th.services__head-th.services__head-th--form Форма
+          th.services__head-th.services__head-th--price Цена, руб.
+          th.services__head-th.services__head-th--order Онлайн запись
+      tbody.services__body-wrap
+        tr.services__tr
+          td.services__td.services__td--title
+            a.services__td-link(href='#')
+              span.services__td-link-text Медицинские осмотры (предварительные, периодические) без оформления личной медицинской книжки
+            ul.services__td-modile-list
+              li.services__td-mobile-items
+                span.services__td-mobile-title Форма
+                p.services__td-mobile-text 302Н
+              li.services__td-mobile-items
+                span.services__td-mobile-title Цена, руб.
+                p.services__td-mobile-text от 1 000 руб.
+                p.services__td-mobile-text за 1 чел.
+          td.services__td.services__td--form 302Н
+          td.services__td.services__td--price
+            span.services__td-text от 1 000 руб.
+            span.services__td-text  за 1 чел.
+          td.services__td.services__td--order
+            a.services__td-order-link(href='#') Оформить заявку
+            span.services__td-order-icon
+              +svg('touch1')
+        tr.services__tr
+          td.services__td.services__td--title
+            a.services__td-link(href='#')
+              span.services__td-link-text Медицинские осмотры (предварительные, периодические) без оформления личной медицинской книжки
+            ul.services__td-modile-list
+              li.services__td-mobile-items
+                span.services__td-mobile-title Форма
+                p.services__td-mobile-text 302Н
+              li.services__td-mobile-items
+                span.services__td-mobile-title Цена, руб.
+                p.services__td-mobile-text от 1 000 руб.
+                p.services__td-mobile-text за 1 чел.
+          td.services__td.services__td--form 302Н
+          td.services__td.services__td--price
+            span.services__td-text от 2 000 руб.
+            span.services__td-text  за 1 чел.
+          td.services__td.services__td--order
+            a.services__td-order-link(href='#') Оформить заявку
+            span.services__td-order-icon
+              +svg('touch1')
+        tr.services__tr
+          td.services__td.services__td--title
+            a.services__td-link(href='#')
+              span.services__td-link-text Предрейсовые медицинские осмотры на территории клиники
+            ul.services__td-modile-list
+              li.services__td-mobile-items
+                span.services__td-mobile-title Форма
+                p.services__td-mobile-text 302Н
+              li.services__td-mobile-items
+                span.services__td-mobile-title Цена, руб.
+                p.services__td-mobile-text 150/день
+          td.services__td.services__td--form 302Н
+          td.services__td.services__td--price
+            span.services__td-text 150/день
+          td.services__td.services__td--order
+            a.services__td-order-link(href='#') Оформить заявку
+            span.services__td-order-icon
+              +svg('touch1')

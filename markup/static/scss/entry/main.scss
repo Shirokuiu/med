@@ -12,10 +12,16 @@
 /* Components, which is used in current project. */
 @import 'partials/_components.scss';
 
-// Components
-@import 'components/page-header/page-header';
-@import 'components/form/form';
-@import 'components/footer-content/footer-content';
+// Плагины
+@import 'owl.carousel/src/scss/owl.carousel.scss';
 
 /* Additional style files. */
 @import '../etc/etc.scss';
+
+// Components
+@import 'components/page-header/page-header';
+@import 'components/form/form';
+@import 'components/fillial/fillial';
+@import 'components/services/services';
+@import 'components/references/references';
+@import 'components/footer-content/footer-content';

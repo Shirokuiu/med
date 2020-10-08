@@ -1,0 +1,16 @@
+mixin references(data)
+  .references
+    h2.headline.references__headline Все виды медицинских справок
+    ul.references__list
+      each item in data
+        li.references__items
+          .references__item-img
+            +img(item.img, '.jpg', 'webp')
+            span.references__item-price
+              | от
+              span.references__item-price-inner=  item.price
+              | руб.
+          .references__item-link-wrap
+            a.references__item-link(href='#')
+              span.references__item-link-text= item.link
+

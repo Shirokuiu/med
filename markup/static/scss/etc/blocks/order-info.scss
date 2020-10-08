@@ -28,7 +28,8 @@
     width: 50%;
     margin-bottom: 33px;
 
-    &:nth-last-child(-n + 2) {
+    &:nth-child(2),
+    &:nth-child(4) {
       margin-bottom: 0;
     }
 
@@ -73,7 +74,8 @@
     margin-bottom: 20px;
   }
 
-  .order-info__items:nth-last-child(-n + 2) {
+  .order-info__items:nth-last-child(-n + 2),
+  .order-info__items:nth-child(2) {
     margin-bottom: 20px;
   }
 
