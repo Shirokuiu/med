@@ -194,14 +194,24 @@
   &__card-form-terms-checkbox {
     @include hidden;
 
-    &:checked + .form__card-form-terms-checkbox-arrow {
+    &:checked + .form__card-form-terms-checkbox-arrow .icon {
       display: block;
     }
   }
 
   &__card-form-terms-checkbox-arrow {
-    @include icon(20px, 20px, #00ADE9);
-    display: none;
+    @include icon(12px, 14px, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #00ADE9;
+    border-radius: 2px;
+
+    .icon {
+      display: none;
+    }
   }
 
   &__card-form-terms-text {

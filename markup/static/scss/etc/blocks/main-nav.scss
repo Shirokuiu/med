@@ -58,6 +58,10 @@
       font-size: 16px;
       line-height: 20px;
     }
+
+    &--inner {
+      border-bottom: 1px solid #536C7D;
+    }
   }
 
   &__dropdown-link-icon,
@@ -284,6 +288,10 @@
       display: block;
       margin-bottom: 20px;
       padding-right: 26px;
+    }
+
+    .main-nav__dropdown-link-text--inner {
+      border-bottom: none;
     }
 
     .main-nav__dropdown-link {
