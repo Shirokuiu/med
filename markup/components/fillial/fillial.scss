@@ -58,6 +58,50 @@
         }
       }
     }
+
+    .fotorama__nav-wrap {
+      position: absolute;
+      left: 25px;
+      right: 5px;
+      bottom: 18px;
+      margin: auto;
+    }
+
+    .fotorama__nav--dots {
+      display: flex;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .fotorama__nav__shaft {
+      flex-grow: 1;
+      display: flex;
+    }
+
+    .fotorama__nav--dots .fotorama__nav__frame {
+      width: auto;
+      height: auto;
+      flex-grow: 1;
+      margin: 0;
+      margin-right: 20px;
+      background-color: rgba(255, 255, 255, 0.6);
+
+      &.fotorama__active {
+        background-color: #FFDD2D;
+      }
+    }
+
+    .fotorama__dot {
+      position: static;
+      top: 0;
+      left: 0;
+      height: 6px;
+      border-radius: 0;
+      border: none;
+    }
   }
 
   &__slider-slide {
@@ -132,6 +176,7 @@
   }
 
   &__slide-img {
+    position: relative;
     flex-shrink: 0;
     margin-bottom: 12px;
 
@@ -326,6 +371,10 @@
 
   .fillial__tel {
     margin: 0 16px;
+  }
+
+  .fillial .fotorama__nav-wrap {
+    display: none;
   }
 }
 

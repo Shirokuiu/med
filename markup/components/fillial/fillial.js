@@ -1,16 +1,20 @@
 import owlCarousel from 'owl.carousel/dist/owl.carousel.min';
+import fotorama from 'static/js/plugins/fotorama.js';
 import Helpers from '../helpers/helpers';
 
 export default class Fillial {
   constructor() {
     this._MAX_WIDTH = 850;
-    this._$fillial = document.querySelector('.fillial');
-    this._$tel = this._$fillial.querySelector('.fillial__tel');
+    this._$fillial = document.querySelectorAll('.fillial');
   }
 
   init() {
     Helpers.isMobileWidth(this._MAX_WIDTH, () => {
-      this._$fillial.append(this._$tel);
+      [...this._$fillial].forEach((fillial) => {
+        const $tel = fillial.querySelector('.fillial__tel');
+
+        fillial.append($tel);
+      });
     });
 
     $(document).ready(function () {
@@ -63,5 +67,7 @@ export default class Fillial {
         }
       });
     });
+
+    $('.fillial__slide-img').fotorama();
   }
 }

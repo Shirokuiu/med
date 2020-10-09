@@ -29,14 +29,73 @@ mixin page-header(data)
             nav.main-nav.page-header__main-nav-wrap
               .main-nav__list-wrap
                 ul.main-nav__list
-                  each item in data.mainNavLinks
+                  each item, idx in data.mainNavLinks
                     li.main-nav__items
-                      a.main-nav__link(
-                        href="#"
-                        class={'main-nav__link--active': item.isActive}
-                        )
-                        span.main-nav__item-title= item.title
+                      .main-nav__link-wrap
+                        a.main-nav__link(
+                          href="#"
+                          class={'main-nav__link--active': item.isActive}
+                          )
+                          span.main-nav__item-title= item.title
+                        button.main-nav__link-arrow(type='button')
+                          +svg('arrow-back')
                       ul.main-nav__dropdown
+                        li.main-nav__dropdown-items
+                          .main-nav__dropdown-item
+                            .main-nav__dropdown-link-wrap
+                              a.main-nav__dropdown-link(href='#')
+                                span.main-nav__dropdown-link-text Медсправки для ГИБДД
+                              button.main-nav__dropdown-link-icon(type='button')
+                                +svg('arrow-back')
+                            ul.main-nav__dropdown-inner
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у с наркологом и психиатром (для ГИБДД)
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у для замены водительского удостоверения
+                        li.main-nav__dropdown-items
+                          .main-nav__dropdown-item
+                            .main-nav__dropdown-link-wrap
+                              a.main-nav__dropdown-link(href='#')
+                                span.main-nav__dropdown-link-text Справки для учебы
+                              button.main-nav__dropdown-link-icon(type='button')
+                                +svg('arrow-back')
+                            ul.main-nav__dropdown-inner
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у с наркологом и психиатром (для ГИБДД)
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у для замены водительского удостоверения
+                        li.main-nav__dropdown-items
+                          .main-nav__dropdown-item
+                            .main-nav__dropdown-link-wrap
+                              a.main-nav__dropdown-link(href='#')
+                                span.main-nav__dropdown-link-text Медсправки для детей
+                              button.main-nav__dropdown-link-icon(type='button')
+                                +svg('arrow-back')
+                            ul.main-nav__dropdown-inner
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у с наркологом и психиатром (для ГИБДД)
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у для замены водительского удостоверения
+                        li.main-nav__dropdown-items
+                          .main-nav__dropdown-item
+                            .main-nav__dropdown-link-wrap
+                              a.main-nav__dropdown-link(href='#')
+                                span.main-nav__dropdown-link-text Медсправки для иностранных граждан
+                              button.main-nav__dropdown-link-icon(type='button')
+                                +svg('arrow-back')
+                            ul.main-nav__dropdown-inner
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у с наркологом и психиатром (для ГИБДД)
+                              li.main-nav__dropdown-items
+                                a.main-nav__dropdown-link(href='#')
+                                  span.main-nav__dropdown-link-text Справка 003-В/у для замены водительского удостоверения
                 .main-nav__list-border
             .page-header__tel-wrap
               a.page-header__tel(href='tel:+7 (495) 720-60-37')

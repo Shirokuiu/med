@@ -12,8 +12,10 @@ mixin fillial(data)
         each item in [1, 2, 3]
           .fillial__slider-slide
             .fillial__slide-content
-              .fillial__slide-img
+              .fillial__slide-img(data-swipe="false" data-width="100%" data-ratio="800/600")
                 +img('slide1', '.jpg', 'webp')
+                +img('slide2', '.jpg', 'webp')
+                +img('slide3', '.jpg', 'webp')
               .fillial__slide-description-wrap
                 a.fillial__slide-title(href='#')
                   span.fillial__slide-title-text Медосмотры на Бульваре Рокоссовского
@@ -38,8 +40,10 @@ mixin fillial(data)
                       span.fillial__slide-list-item-note-text 300 м
           .fillial__slider-slide
             .fillial__slide-content
-              .fillial__slide-img
+              .fillial__slide-img(data-swipe="false" data-width="100%" data-ratio="800/600")
                 +img('slide2', '.jpg', 'webp')
+                +img('slide1', '.jpg', 'webp')
+                +img('slide3', '.jpg', 'webp')
               .fillial__slide-description-wrap
                 a.fillial__slide-title(href='#')
                   span.fillial__slide-title-text Профосмотры на Братиславской
@@ -64,8 +68,10 @@ mixin fillial(data)
                       span.fillial__slide-list-item-note-text 600 м
           .fillial__slider-slide
             .fillial__slide-content
-              .fillial__slide-img
+              .fillial__slide-img(data-swipe="false" data-width="100%" data-ratio="800/600")
                 +img('slide3', '.jpg', 'webp')
+                +img('slide2', '.jpg', 'webp')
+                +img('slide1', '.jpg', 'webp')
               .fillial__slide-description-wrap
                 a.fillial__slide-title(href='#')
                   span.fillial__slide-title-text Медкомиссия на Бунинской аллее
@@ -90,8 +96,10 @@ mixin fillial(data)
                       span.fillial__slide-list-item-note-text 500 м
           .fillial__slider-slide
             .fillial__slide-content
-              .fillial__slide-img
+              .fillial__slide-img(data-swipe="false" data-width="100%" data-ratio="800/600")
                 +img('slide4', '.jpg', 'webp')
+                +img('slide3', '.jpg', 'webp')
+                +img('slide2', '.jpg', 'webp')
               .fillial__slide-description-wrap
                 a.fillial__slide-title(href='#')
                   span.fillial__slide-title-text Медосмотры на Севастопольской

@@ -85,7 +85,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     overflow-y: scroll;
     display: none;
     flex-direction: column;
@@ -277,6 +277,10 @@
 }
 
 @media (max-width: 1160px) {
+  .page-header {
+    padding-top: 69px;
+  }
+
   .page-header__info-top {
     display: none;
   }
@@ -287,6 +291,11 @@
   }
 
   .page-header__top {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
     margin-bottom: 12px;
   }
 
@@ -338,6 +347,10 @@
 
   .page-header__top-items {
     margin-bottom: 17px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .page-header__top-list {
@@ -375,6 +388,7 @@
 
   .page-header__bottom {
     padding: 0;
+    padding-top: 12px;
     box-shadow: none;
   }
 }

@@ -13,7 +13,12 @@
 @import 'partials/_components.scss';
 
 // Плагины
+
+// OwlCarousel
 @import 'owl.carousel/src/scss/owl.carousel.scss';
+
+// Fotorama
+@import '../plugins/fotorama/fotorama';
 
 /* Additional style files. */
 @import '../etc/etc.scss';
